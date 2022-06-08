@@ -1,0 +1,82 @@
+.header {
+    border-bottom: 1px solid #ECECEC;
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.header__container, .sait-nav {
+    @extend %center-align;
+}
+.header__logo {
+    margin-right: 93px;
+}
+.sait-nav__list {
+    display: flex;
+}
+
+.sait-nav__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.sait-nav__link {
+    position: relative;
+
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
+    text-decoration: none;
+    color: $titleColor;
+    
+    @include transitioned(color);
+
+    &:hover, &:focus {
+        color: $accentColor;
+    }
+}
+.sait-nav__link--current {
+        color: $accentColor;
+
+    &::after {
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+    
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 4px;
+        background-color: $accentColor;
+        border-radius: 2px;
+    }
+}
+
+.contacts {
+    display: flex;
+    margin-left: auto;
+}
+
+.contacts__item:not(:last-child) {
+    margin-right: 50px;
+
+}
+
+.contacts__link {
+    @extend %center-align;
+
+    font-style: normal;
+    text-decoration: none;
+    color: $textColor;
+
+    @include transitioned(color);
+
+    &:hover, &:focus {
+        color: $accentColor;
+    }
+}
+.contacts__icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
