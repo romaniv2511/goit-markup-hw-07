@@ -39,7 +39,7 @@
         color: $primaryWhiteColor;
     }
 
-    &:hover, &focus {
+    &:hover, &:focus {
         color: $accentColor;
     }     
 }

@@ -49,7 +49,7 @@
     @include transitioned(background-color);
 
     &:hover,
-    &focus {
+    &:focus {
         background-color: $accentColor;
     }
 }
